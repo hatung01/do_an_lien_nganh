@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>dfqweqwerqr</h2>
+    <p>Thông tin và mô tả về học viên mục tiêu cho khóa học của bạn.</p>
+    <button id="deleteButton" class="delete-course-btn">Xóa khóa học</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const deleteButton = document.getElementById("deleteButton");
+        if (deleteButton) {
+            deleteButton.onclick = deleteCourse;
+        }
+    });
+
+    function deleteCourse() {
+        let courses = JSON.parse(localStorage.getItem("courses")) || [];
+        const courseToDelete = localStorage.getItem('courseToEdit');
+        
+        if (!courseToDelete) {
+            alert("Không tìm thấy khóa học cần xóa.");
+            return;
+        }
+
+        // Lọc bỏ khóa học cần xóa
+        courses = courses.filter(course => course.name !== courseToDelete);
+        localStorage.setItem("courses", JSON.stringify(courses));
+        localStorage.setItem("coursesUpdated", "true");
+
+        alert("Khóa học đã được xóa thành công!");
+        window.location.href = "add_courses.html";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* Thiết lập kiểu dáng chung */
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Sidebar (menu bên) */
+.sidenav {
+  width: 60px;  /* Kích thước ô chứa ban đầu */
+  height: 100%;
+  background-color: #111;
+  position: fixed;
+  transition: width 0.3s ease;
+  padding-top: 60px;
+  overflow-x: hidden;
+  z-index: 2;
+  white-space: nowrap; /* Đảm bảo chữ không bị xuống dòng */
+}
+
+/* Khi hover vào, mở rộng sidebar */
+.sidenav:hover {
+  width: 250px; /* Chiều rộng khi hover vào */
+}
+
+/* Liên kết trong sidebar */
+.sidenav a {
+  padding: 16px;
+  text-decoration: none;
+  font-size: 20px;  /* Kích thước chữ */
+  color: #ffffff;
+  display: flex;
+  align-items: center; /* Căn giữa icon và text */
+  transition: 0.3s;
+  position: relative; /* Đảm bảo tất cả phần tử trong a có thể điều chỉnh */
+}
+
+/* Ẩn văn bản mặc định mà không thay đổi khoảng cách */
+.menu-text {
+  visibility: hidden; /* Ẩn văn bản khi không hover vào */
+  opacity: 0; /* Đảm bảo văn bản không ảnh hưởng đến bố cục */
+  transition: visibility 0s 
+}
+
+/* Khi hover vào sidebar, văn bản sẽ hiển thị */
+.sidenav:hover .menu-text {
+  visibility: visible; /* Hiển thị văn bản khi hover vào sidebar */
+  opacity: 1; /* Hiển thị văn bản */
+}
+
+/* Hiệu ứng hover cho các mục trong sidebar */
+.sidenav a:hover {
+  background-color: #9b59b6; /* Màu nền thay đổi khi hover vào */
+  color: white; /* Màu chữ khi hover */
+}
+
+/* Thêm icon vào mục menu */
+.sidenav i {
+  margin-right: 10px; /* Tạo khoảng cách giữa icon và văn bản */
+  transition: 0.3s; /* Đảm bảo icon không dịch chuyển khi hover */
+}
+
+/* Nội dung chính */
+#main {
+  width: 100%;
+  margin-left: 60px;  /* Giữ khoảng cách để không bị đè lên bởi sidebar */
+  padding: 16px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Khi hover vào sidebar, nội dung chính sẽ không bị di chuyển mà bị đè lên */
+.sidenav:hover ~ #main {
+  z-index: 1;  /* Đảm bảo nội dung chính sẽ bị phủ lên bởi sidebar */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box_add_courses {
+  margin: 100px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between; /* Đẩy các phần tử ra hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 50px;
+  border: 1px solid #ddd; /* Viền xung quanh để giống với hình ảnh */
+  background-color: #fff; /* Màu nền trắng */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+}
+
+p {
+  margin: 0; 
+  padding-top: 10px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.create_courses {
+  padding: 10px 20px;
+  background-color: #4B0082; 
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.course-item {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 100px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.3s ease;
+}
+
+
+/* Bóng đổ khi di chuột */
+.course-item:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Định vị hover-info để phủ lên toàn bộ thẻ khóa học */
+.hover-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Màu nền bán trong suốt để thấy nội dung bên dưới */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #4B0082;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 8px; /* Bo góc để khớp với thẻ khóa học */
+  cursor: pointer;
+}
+
+/* Hiển thị hover-info khi di chuột vào course-item */
+.course-item:hover .hover-info {
+  opacity: 1;
+}
+
+
+
+
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], select[name=topic], option {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+/* Set a style for all buttons */
+button {
+background-color: #4B0082;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 50%;
+height: 50px;
+opacity: 0.9;
+}
+
+button:hover {
+opacity:1;
+}
+
+.create_courses{
+  width: 20% !important;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 20px;
+background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn {
+float: left;
+width: 50%;
+}
+
+/* Add padding to container elements */
+.form_add_courses {
+padding: 5px;
+margin: 10px;
+}
+
+/* The Modal (background) */
+.modal{
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%;
+height: 100%; 
+overflow: auto; /* Enable scroll if needed */
+background-color: #474e5d;
+padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 5% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
+max-width: 600px;
+}
+
+/* Style the horizontal ruler */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}

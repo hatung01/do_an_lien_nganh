@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý khóa học</title>
+  <link rel="stylesheet" href="create_courses.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="top-nav">
+    <span class="back-arrow"> <a href="add_courses.html"><i class="fa-solid fa-angle-left"></i> Quay lại khóa học</a></span>
+    <span class="title">SSSdsafsadf</span>
+    <span class="settings-icon" onclick="loadSection('hoc_vien_muc_tieu.html')"><i class="fa-solid fa-gear"></i></span>
+  </div>
+  <div class="container">
+    <!-- Sidebar Menu -->
+    <div class="menu-container">
+      <!-- Section 1 -->
+      <div class="menu-section">
+          <h3>Lên kế hoạch cho khóa học của bạn</h3>
+          <div class="menu-item" onclick="loadSection('hoc_vien_muc_tieu.html')">Học viên mục tiêu</div>
+          <div class="menu-item" onclick = "loadSection('cau_truc_khoa_hoc.html')">Cấu trúc khóa học</div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="menu-section">
+          <h3>Tạo nội dung của bạn</h3>
+          <div class="menu-item" onclick="loadSection('ct_giang_day.html')">Chương trình giảng dạy</div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="menu-section">
+          <h3>Xuất bản khóa học của bạn</h3>
+          <div class="menu-item">Trang tổng quan khóa học</div>
+          <div class="menu-item">Định giá</div>
+          <div class="menu-item">Khuyến mại</div>
+          <div class="menu-item">Tin nhắn khóa học</div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="submit-section">
+          <button type="button">Gửi đi để xem xét</button>
+      </div>
+    </div>
+    
+    <!-- Content Area -->
+    <div id="content" class="content">
+      <p>Chọn một mục từ menu để xem nội dung.</p>
+    </div>
+  </div>
+<script src="create_courses.js"></script>
+<script src="hoc_vien_muc_tieu.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học viên mục tiêu</title>
+    <link rel="stylesheet" href="hoc_vien_muc_tieu.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Học viên mục tiêu</h2>
+        <hr>
+        
+        <h3>Học viên sẽ học được gì trong khóa học của bạn?</h3>
+        <p>
+            Bạn phải nhập ít nhất 
+            <span class="highlight">4 mục tiêu hoặc kết quả học tập</span> mà học viên có thể mong đợi đạt được sau khi hoàn thành khóa học.
+        </p>
+        <div class="input-group">
+            <input type="text" placeholder="Ví dụ: Xác định vai trò và trách nhiệm của người quản lý dự án">
+
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Ví dụ: Ước tính tiến độ và ngân sách dự án">
+
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Ví dụ: Xác định và quản lý rủi ro dự án">
+
+        </div>
+        <div class="input-group">
+            <input rows="3" type="text" placeholder="Ví dụ: Hoàn thành nghiên cứu điển hình để quản lý một dự án từ khâu ý tưởng đến khi hoàn thành">
+        </div>
+        <div id="input-container-1" ></div>
+        <button type="button" class="add-button" onclick="addInputField('input-container-1')">
+          + Thêm nội dung vào phản hồi của bạn
+        </button>
+        <h3>Yêu cầu hoặc điều kiện tiên quyết để tham gia khóa học của bạn là gì?</h3>
+        <p>
+            Liệt kê các kỹ năng, kinh nghiệm, công cụ hoặc thiết bị mà học viên bắt buộc phải có trước khi tham gia khóa học.
+            <br>Nếu bạn không có yêu cầu nào, hãy tận dụng phần này và coi đây là cơ hội để bạn hạ thấp tiêu chuẩn cho người mới bắt đầu.
+        </p>
+        <div class="input-group">
+            <input rows="3" type="text" placeholder="Ví dụ: Không cần kinh nghiệm lập trình. Bạn sẽ học mọi thử bạn cần biết">
+        </div>
+        <div id="input-container-2"></div>
+        <button type="button" class="add-button" onclick="addInputField('input-container-2')">
+          + Thêm nội dung vào phản hồi của bạn
+        </button>
+        <h3>Khóa học này dành cho đối tượng nào?</h3>
+        <p>
+            Viết mô tả rõ ràng về học viên mục tiêu cho khóa học, tức là những người sẽ thấy nội dung khóa học có giá trị.
+            <br>Điều này sẽ giúp bạn thu hút học viên phù hợp tham gia khóa học
+        </p>
+        <div class="input-group">
+            <input rows="3" type="text" placeholder="Ví dụ: Các nhà phát triển Pyton có trình độ sơ cấp muốn tìm hiểu về khoa học dữ liệu">
+        </div>
+        <div id="input-container-3"></div>
+        <button type="button" class="add-button" onclick="addInputField('input-container-3')">
+          + Thêm nội dung vào phản hồi của bạn
+        </button>
+    </div>
+    <script src="hoc_vien_muc_tieu.js"></script>
+</body>
+</html>
